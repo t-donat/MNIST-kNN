@@ -1,4 +1,4 @@
-# MNIST-kNN
+# kNN Classification
 This machine learning algorithm that uses kNN to classify the NMIST handwritten images as well as free spoken digits. The data can be preprocessed before classification: For images, a PCA-transform is calculated, and for audio samples the DFT is calculated.
 
 ## Helper
@@ -8,7 +8,7 @@ This class contains staticmethods which perform type checks and some value check
 
 The Dataset class is used to store the data samples. Running the appropriate `create_ds_image(<path>)` or `create_ds_audio(<path>)` will create a Dataset Object with all .png or .wav files in the directory passed as an argument.
 ### Dataset methods
-#### `generate_sets`: 
+#### `generate_sets`
 Creates a training and test set split by the ratio set by the property `train_size` (which is set to 0.8 by default). Choose from 'random' (default), 'equal' and 'stratified': 
 * `random`: randomly choose the samples out of all of them
 * `equal`: attempt to take an equal ammount of samples per digit
